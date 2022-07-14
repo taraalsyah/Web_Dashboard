@@ -56,6 +56,7 @@ th,td{
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    z-index: 1;
 }
 .side-menu .brand-name{
     height: 10vh;
@@ -66,7 +67,11 @@ th,td{
 .side-menu ul{
     margin-top: 5px;
 }
-.side-menu li{
+.side-menu ul li{
+    position: relative;
+    width: 100%;
+}
+.side-menu li a{
     font-size: 20px;
     padding: 10px 40px;
     color: white;
@@ -74,11 +79,33 @@ th,td{
     align-items: center;
     margin-top: 20px;
 }
-.side-menu li img{
+.side-menu li a img{
     width: 20px;
     height: 20px;
 }
-.side-menu li:hover{
+.side-menu ul li .tooltip{
+    position: absolute;
+    top: 20px;
+    left: 250px;
+    transform: translate(-45%, -50%);
+    background: white;
+    border-radius: 10%;
+    height: 35px;
+    text-align: center;
+    line-height: 35px;
+    width: 130px;
+    display: block;
+    color: #242424;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .3);
+    opacity: 0;
+    pointer-events: none;
+    transition: all .3s ease;
+}
+.side-menu ul li:hover .tooltip{
+    opacity: 1;
+    top: 50%;
+}
+.side-menu li:hover a{
     background: white;
     color: #f05462;
 }
@@ -186,16 +213,17 @@ th,td{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px  0 rgba(0, 0, 0, 0.19);
 }
 @media screen and (max-width: 1050px) {
-    .side-menu li{
+    .side-menu li a{
         font-size: 18px;
     }
 }
 @media screen and (max-width: 940px) {
-    .side-menu li span{
+    .side-menu li a span{
         font-size: 18px;
         display: none;
     }
-    .side-menu li:hover{
+    
+    .side-menu li:hover a{
         background: #f05462;
         border: 1px solid white;
     }
@@ -224,5 +252,5 @@ th,td{
     .container .content .content-2 .recent-payment table td:nth-child(2){
         display: none;
     }
-
+    
 }
