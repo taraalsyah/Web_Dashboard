@@ -52,7 +52,7 @@ th,td{
 .side-menu{
     position: fixed;
     background: #f05462;
-    width: 15vw;
+    width: 14vw;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
