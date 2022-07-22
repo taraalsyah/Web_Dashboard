@@ -5,9 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="FaviconIcon" href="favicon.ico" type="image/x-icon">
     <title>Admin Dashboard</title>
 </head>
 <body>
+    <input type="checkbox" id="toggle">
     <div class="side-menu">
         <div class="brand-name">
             <h1>Brand</h1>
@@ -48,6 +50,9 @@
     <div class="container">
         <div class="header">
             <div class="nav">
+                <label for="toggle">
+                    <img class="toggle-img" for="toggle" src="img/bx-menu.png" alt="">
+                </label>
                 <div class="search">
                     <input type="text" placeholder="search...">
                     <button type="submit"><img src="img/search.png" alt=""></button>
@@ -111,7 +116,7 @@
                         </tr>
                         <tr>
                             <td>John Dea</td>
-                            <td>St.james College</td>
+                            <td>St.james</td>
                             <td>$120</td>
                             <td><a href="#" class="btn">View</a></td>
                         </tr>
