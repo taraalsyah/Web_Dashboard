@@ -41,53 +41,30 @@ input{
     border-bottom: 2px solid #999;
     
 }
-
+/* Batas awal table */
 table{
-    padding: 10px;
-    border-top: none;
+    border-collapse: collapse;
+    width: 100%;
+    padding: 0 5px;
 }
-
-table tr{
-    display: flex;
-    justify-content: left;
-    border:1px solid #999;
-    border-left: none;
-    border-right: none;
-    border-top: none;
+td,th{
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+tr:nth-child(odd){
+    background-color: #f2f2f2;
+}
+tr:hover {
+    background-color: #ddd;
+}
+th {
+    padding-top: 12px;
+    padding-bottom: 12px;
     text-align: left;
-}
-
-table tr:first-child{
-    border-bottom: 1px outset #242424;
-    background: rgb(230, 227, 227);
-}
-
-.recent-payment table tr th,
-.recent-payment table tr td{
-    width: 25%;
-    padding: 5px 2px;
-    border:1px solid #999;
-    border-top: none;
-    border-left: none;
-    text-align: left;
-    border-bottom: none;
-}
-
-.new-student table tr th,
-.new-student table tr td{
-    padding: 5px;
-    width: 34%;
-    border:1px solid #999;
-    border-top: none;
-    border-left: none;
-    text-align: left;
-    border-bottom: none;
-}
-
-th:last-child,td:last-child{
-    border-right: none;
-}
-
+    background-color: #04AA6D;
+    color: white;
+  }
+/* Batas akhir table */
 .btn:hover{
     color: #f05462;
     background: white;
@@ -167,6 +144,8 @@ th:last-child,td:last-child{
     background: grey;
     color: #f05462;
 }
+
+
 
 .container{
     position: relative;
