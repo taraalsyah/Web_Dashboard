@@ -46,10 +46,12 @@ table{
     border-collapse: collapse;
     width: 100%;
     padding: 0 5px;
+
 }
 td,th{
     border: 1px solid #ddd;
-    padding: 8px;
+    padding: 10px;
+    text-align: center;
 }
 tr:nth-child(odd){
     background-color: #f2f2f2;
@@ -60,7 +62,7 @@ tr:hover {
 th {
     padding-top: 12px;
     padding-bottom: 12px;
-    text-align: left;
+    text-align: center;
     background-color: #04AA6D;
     color: white;
   }
@@ -246,6 +248,31 @@ th {
     align-items: center;
     justify-content: space-around;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px  0 rgba(0, 0, 0, 0.19);
+}
+.container .content .cards .card span{
+    position: absolute;
+    top: -20px;
+    cursor: pointer;
+    background-color: #242424;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 7px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease;
+}
+.container .content .cards .card span::before{
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    transform: translate(-50%);
+    border: 15px solid;
+    border-color: #000 #0000 #0000 #0000;
+}
+.container .content .cards .card:hover span{
+    opacity: 1;
+    visibility: visible;
 }
 
 .container .content .content-2 {
